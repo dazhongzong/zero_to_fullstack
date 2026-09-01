@@ -1,4 +1,4 @@
-import { animate, scrambleText } from "https://cdn.jsdelivr.net/npm/animejs@4/+esm";
+import { animate, scrambleText } from "animejs";
 
 export function initScoreAnim() {
   var btn = document.querySelector(".primary-button");
@@ -6,7 +6,7 @@ export function initScoreAnim() {
   if (!btn || !scoreEl) return; // 个人主页没这俩元素
 
   btn.addEventListener("click", function () {
-    animate(scoreEl, {
+    animate(scoreEl!, {
       innerHTML: scrambleText({ chars: "0-9" }),
       duration: 1500,
     });
